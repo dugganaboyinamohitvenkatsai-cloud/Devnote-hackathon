@@ -1,0 +1,140 @@
+{
+  "theme": "dark",
+  "typography": {
+    "headings": {
+      "font_family": "Cabinet Grotesk, sans-serif",
+      "strategy": "The Anti-Default Rule applies. Use Cabinet Grotesk for a slightly industrial but modern AgTech feel. Tracking tight for larger headers.",
+      "sizes": {
+        "h1": "text-4xl sm:text-5xl font-bold tracking-tighter text-zinc-100",
+        "h2": "text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100",
+        "h3": "text-xl sm:text-2xl font-medium tracking-tight text-zinc-200",
+        "h4": "text-lg font-medium text-zinc-300"
+      }
+    },
+    "body": {
+      "font_family": "Inter, sans-serif",
+      "strategy": "Clean sans body for data legibility in dense dashboards.",
+      "sizes": {
+        "base": "text-base text-zinc-400 leading-relaxed",
+        "sm": "text-sm text-zinc-500",
+        "xs": "text-xs font-mono text-emerald-500/80 uppercase tracking-[0.2em]"
+      }
+    }
+  },
+  "colors": {
+    "archetype": "ORGANIC & EARTHY meets SWISS & HIGH-CONTRAST",
+    "background": {
+      "base": "bg-zinc-950",
+      "surface": "bg-zinc-900",
+      "surface_elevated": "bg-zinc-800/50"
+    },
+    "accents": {
+      "primary": "text-emerald-400",
+      "primary_bg": "bg-emerald-500",
+      "primary_border": "border-emerald-500/30",
+      "primary_glow": "shadow-[0_0_15px_rgba(16,185,129,0.15)]",
+      "secondary": "text-lime-400"
+    },
+    "text": {
+      "primary": "text-zinc-100",
+      "secondary": "text-zinc-400",
+      "muted": "text-zinc-500"
+    },
+    "borders": {
+      "subtle": "border-zinc-800",
+      "focus": "border-emerald-500/50"
+    },
+    "status": {
+      "memory_match": "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+      "warning": "text-amber-400 bg-amber-500/10 border-amber-500/20",
+      "critical": "text-rose-400 bg-rose-500/10 border-rose-500/20"
+    }
+  },
+  "visual_enhancers": {
+    "surfaces": "Use Neumorphism (Tactile) variants. Flat solid surfaces with 1px subtle borders (border-zinc-800). No pure black. Glassmorphism ONLY for floating modals or sticky headers if applicable.",
+    "borders": "Soft borders (rounded-xl or rounded-2xl). Use Grid Borders for data-heavy inner tables.",
+    "textures": "Subtle noise overlay (opacity 0.02) to make the dark mode feel less digital and more earthy/tactile.",
+    "spacing": "Generous spacing philosophy. Use p-6 and p-8 inside cards. gap-6 for grid layouts."
+  },
+  "components": {
+    "cards": {
+      "base": "bg-zinc-900 border border-zinc-800 rounded-2xl p-6",
+      "memory_card": "bg-zinc-900/80 border border-emerald-500/20 rounded-2xl p-6 relative overflow-hidden. Use a subtle top border highlight (border-t-emerald-500).",
+      "hindsight_trace": "bg-zinc-950 border border-zinc-800 rounded-xl p-4 flex flex-col gap-3. Items connected by vertical lines to show reasoning."
+    },
+    "buttons": {
+      "primary": "bg-emerald-600 hover:bg-emerald-500 text-white rounded-full px-6 py-2.5 font-medium transition-all shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]",
+      "secondary": "bg-zinc-800 hover:bg-zinc-700 text-zinc-100 border border-zinc-700 rounded-full px-6 py-2.5 font-medium transition-all",
+      "outline": "bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 rounded-full px-4 py-2 text-sm transition-colors"
+    },
+    "tags": {
+      "base": "px-2.5 py-1 rounded-md text-xs font-mono font-medium"
+    },
+    "timeline": {
+      "node": "w-3 h-3 rounded-full bg-zinc-700 ring-4 ring-zinc-950",
+      "node_active": "w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-zinc-950 shadow-[0_0_10px_rgba(16,185,129,0.5)]",
+      "line": "w-px bg-zinc-800 absolute left-[5px] top-3 bottom-0"
+    }
+  },
+  "grids_and_layouts": {
+    "dashboard": "High Density Grid (Mode B). grid-cols-1 md:grid-cols-12 gap-6 p-6 min-h-screen bg-zinc-950",
+    "structure": {
+      "header": "col-span-full flex justify-between items-center pb-4 border-b border-zinc-800",
+      "left_rail_memory": "col-span-12 md:col-span-3 lg:col-span-3 flex flex-col gap-6. Dominant visual hierarchy for Hindsight.",
+      "main_command": "col-span-12 md:col-span-6 lg:col-span-6 flex flex-col gap-6. Current incident, Rover evidence, timeline.",
+      "right_rail_actions": "col-span-12 md:col-span-3 lg:col-span-3 flex flex-col gap-6. Demo controls, Action / Validate, Outcomes."
+    }
+  },
+  "motion": {
+    "micro_interactions": "Subtle -translate-y-[1px] on card hover. Highlight border color change on focus.",
+    "entrance": "Staggered fade-in for memory cards to simulate 'retrieval' in progress.",
+    "state_transitions": "Smooth transitions for Day 1/30/60 switches, allowing memory cards to enter/exit."
+  },
+  "accessibility": {
+    "contrast": "Ensure all text on dark surfaces meets WCAG AA. Zinc-400 and Zinc-100 are safe. Emerald-500 is used for accents and text, must check if legible over dark bg (use Emerald-400 for text).",
+    "focus": "focus:ring-2 focus:ring-emerald-500/50 focus:outline-none"
+  },
+  "media": {
+    "image_urls": {
+      "crop_disease_1": {
+        "url": "https://images.unsplash.com/photo-1660904900487-3c6fbcb3b387?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxjcm9wJTIwZGlzZWFzZSUyMGxlYWYlMjBjbG9zZSUyMHVwfGVufDB8fHx8MTc5MDY5NzAzNnww&ixlib=rb-4.1.0&q=85",
+        "category": "incident_evidence",
+        "description": "Close up of yellowing crop disease"
+      },
+      "crop_disease_2": {
+        "url": "https://images.unsplash.com/photo-1604478421163-92e079706e0e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxjcm9wJTIwZGlzZWFzZSUyMGxlYWYlMjBjbG9zZSUyMHVwfGVufDB8fHx8MTc5MDY5NzAzNnww&ixlib=rb-4.1.0&q=85",
+        "category": "rover_camera",
+        "description": "Leaf showing dots / fungal disease"
+      },
+      "farm_aerial": {
+        "url": "https://images.unsplash.com/photo-1781332151334-b9217e6d192e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwyfHxmYXJtJTIwYWVyaWFsJTIwdmlldyUyMGRhcmt8ZW58MHx8fHwxNzkwNjk3MDM2fDA&ixlib=rb-4.1.0&q=85",
+        "category": "farm_map",
+        "description": "Dark aerial view of contrast green agricultural fields"
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Prioritize the Hindsight Memory visualization over standard farm metrics. Show clearly how the system links current incidents to past ones.",
+    "Implement Demo Control Panel (Day 1, Day 30, Day 60, Reset) to explicitly drive deterministic state changes.",
+    "Build the Agent Reasoning Timeline as a vertical step list (e.g. 'Analyzing image -> Retrieving Hindsight -> Generating Diagnosis -> Awaiting Expert').",
+    "Keep typography clean. Use Cabinet Grotesk for Headings and Inter for body.",
+    "Ensure 'DEMO MODE' is clearly visible in the header.",
+    "Use Phosphor Icons (@phosphor-icons/react) for technical, clean iconography.",
+    "Avoid generic background gradients. Use dark zinc (#09090b) with subtle borders to separate data panels.",
+    "Display warning states for crop anomalies using text-amber-400 or text-emerald-400 depending on diagnosis status.",
+    "Use HTML/Tailwind for main structure, integrate Shadcn UI for dropdowns/modals if needed, but standard divs are preferred for complex grids.",
+    "Include a 'Save Outcome' button that logically would write back to the memory store."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts. Create depth through layered design elements with z-index hierarchy.",
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container. Do not add text-align: center on root containers.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant Emoji characters (like robot, brain, lightbulb) for icons.",
+    "Every interaction needs micro-animations - hover states, transitions. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "All interactive and key informational elements MUST include a `data-testid` attribute for testing."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "iteration": 2,
+  "passed": 13,
+  "failed": 0,
+  "bugs": [],
+  "action_items": [],
+  "retest_needed": false,
+  "checks": [
+    {"criterion": "Dashboard loads as AgroSense AI with persistent farm intelligence positioning and visible DEMO MODE", "name": "dashboard-shell-demo-mode", "lane": "browser", "status": "passed", "evidence": "Rerun rendered AgroSense AI shell, Persistent Farm Intelligence Agent, DEMO MODE, online/rover statuses, differentiator, and local-memory disclaimer; console_errors empty."},
+    {"criterion": "Day 1 demo shows limited historical memory and safety-aware expert validation", "name": "day-one-safety-validation", "lane": "browser", "status": "passed", "evidence": "Rerun verified Day 1, 0 historical incidents, no highly similar incident, insufficient-evidence/request-expert copy, approval controls, and disabled save."},
+    {"criterion": "Day 1/30/60 deterministic snapshot data is correct", "name": "test_tscheck_demo_snapshots.py", "lane": "backend", "status": "passed", "evidence": "Backend suite HTTP assertions passed for GET /api/demo/day/1,/30,/60 with expected 0/1/2 historical counts and #101/#102 IDs."},
+    {"criterion": "Day 30 reuses historical memory", "name": "day-thirty-memory-reuse", "lane": "browser", "status": "passed", "evidence": "Rerun verified one #101 reference case, improved outcome, expert validation trace, Incident #101 context, and memory reuse timeline."},
+    {"criterion": "Day 60 compares multiple historical cases", "name": "day-sixty-multiple-cases", "lane": "browser", "status": "passed", "evidence": "Rerun verified Day 60 stats 2/2/2, cards #101/#102, multiple-cases timeline, and 2 cases retrieved."},
+    {"criterion": "Agent reasoning controls work", "name": "agent-reasoning-controls", "lane": "browser", "status": "passed", "evidence": "Rerun verified Start analysis, Search Hindsight, Request expert, and Approve transitions without dead-end."},
+    {"criterion": "Memory search API returns deterministic historical cases", "name": "test_tscheck_memory_search.py", "lane": "backend", "status": "passed", "evidence": "Backend suite HTTP assertion passed for POST /api/memory/search status 200 with demo mode, found=2, #101/#102."},
+    {"criterion": "Saving an expert-approved outcome works", "name": "save-approved-outcome", "lane": "browser", "status": "passed", "evidence": "Rerun observed successful POST /api/memory/save and Saved to memory / Experience saved to memory UI state."},
+    {"criterion": "Memory save enforces expert approval and persists approved result", "name": "test_tscheck_memory_save.py", "lane": "backend", "status": "passed", "evidence": "Backend suite verified unapproved POST /api/memory/save returns 400 and approved request returns 200 saved=true."},
+    {"criterion": "Demo reset works", "name": "reset-demo-state", "lane": "browser", "status": "passed", "evidence": "Rerun verified save then reset returns Day 1, 0 incidents, empty memory state, and disabled save."},
+    {"criterion": "Demo reset and health explicitly report local demo mode", "name": "test_tscheck_demo_reset.py", "lane": "backend", "status": "passed", "evidence": "Backend suite verified POST /api/demo/reset 200 Day 1/0 incidents and GET /api/health 200 mode=demo, connected=false, not-connected-to-real-Hindsight."},
+    {"criterion": "Responsive dashboard presentation", "name": "responsive-dashboard-presentation", "lane": "browser", "status": "passed", "evidence": "Rerun verified three rails, retrieval trace, rover evidence, agent/memory timelines, chat, no horizontal overflow, and console_errors empty."},
+    {"criterion": "Farm context API identifies Green Valley Farm / Tomato Field A", "name": "test_tscheck_farm_profile.py", "lane": "backend", "status": "passed", "evidence": "Backend suite HTTP assertion passed for GET /api/farm status 200 with Green Valley Farm, Tomato Field A, Tomato."}
+  ]
+}
